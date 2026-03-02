@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamonaviy Bosh Sahifa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Umumiy sozlamalar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Navigatsiya */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffde59;
+        }
+
+        /* Hero Bo'limi */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 8% 0 8%;
+            height: 85vh;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Tugmalar */
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background: #ffde59;
+            color: #333;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #fff;
+        }
+
+        /* Rasm qismi (Shape) */
+        .hero-img {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: morph 8s ease-in-out infinite;
+        }
+
+        @keyframes morph {
+            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+            100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        }
+
+        .hero-img img {
+            width: 80%;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+        }
+
+        /* Mobil qurilmalar uchun */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 50px;
+            }
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            .hero-img {
+                width: 250px;
+                height: 250px;
+                margin-top: 50px;
+            }
+            .nav-links {
+                display: none; /* Mobil menyuni soddalashtirish uchun */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">GEMINI<span>DIGITAL</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Asosiy</a></li>
+            <li><a href="#">Xizmatlar</a></li>
+            <li><a href="#">Biz haqimizda</a></li>
+            <li><a href="#">Aloqa</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Kelajak Raqamli Dunyosiga Xush Kelibsiz</h1>
+            <p>Biz sizning g'oyalaringizni eng zamonaviy texnologiyalar yordamida haqiqatga aylantiramiz. Mukammal dizayn va yuqori sifat — bizning asosiy maqsadimiz.</p>
+            <a href="#" class="btn">Boshlash</a>
+        </div>
+        
+        <div class="hero-img">
+            <img src="https://cdn-icons-png.flaticon.com/512/2010/2010990.png" alt="Illustration">
+        </div>
+    </section>
+
+</body>
+</html>
