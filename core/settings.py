@@ -31,13 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "unfold",  # <--- Must be at the top
+    "unfold.contrib.filters", # Optional: for better filter styling
+    "unfold.contrib.forms",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'main',
 ]
 
